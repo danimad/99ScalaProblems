@@ -33,6 +33,7 @@ object Problems {
   }
 
   // TODO: make it so it can be parametrically created
+  // TODO: write test
   val tv = new TV {}
   val cat = new Gato {}
 
