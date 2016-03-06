@@ -2,6 +2,7 @@ object Traits {
 
   trait Eq {
     // TODO: find better solution, so it doesn't have to be 'values'
+    // helpful: https://gist.github.com/etorreborre/3847474
     val value: Int
 
     def canEqual(a: Any) = a.isInstanceOf[Eq]
