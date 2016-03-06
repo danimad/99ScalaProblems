@@ -1,5 +1,6 @@
+import Traits._
 
-object Problems{
+object Problems {
   def main(args: Array[String]): Unit = {
     println("Hello, world!")
   }
@@ -30,23 +31,32 @@ object Problems{
   def lengthFun[A](list: List[A]): Int = list.foldLeft(0) {
     (c, _) => c + 1
   }
+
+  // TODO: make it so it can be parametrically created
+  val tv = new TV {}
+  val cat = new Gato {}
+
+  if (tv +=+ cat)
+  println("Works")
+  else
+  println("Doesn't work")
 }
 
-object TraitProblem {
+// object TraitProblem {
 
-  trait Eq[A] {
-    def ===(rhs: A): Boolean
-  }
+//   trait Eq[A] {
+//     def ===(rhs: A): Boolean
+//   }
 
-  class TV {
-    val csatorna = 8
-  }
+//   class TV {
+//     val csatorna = 8
+//   }
 
 
-  class Macska extends Eq[Macska] with Eq[TV] {
-    val elet = 9
+//   class Macska extends Eq[Macska] with Eq[TV] {
+//     val elet = 9
 
-    override def ===(rhs: Macska) = elet == rhs.elet
-    override def ===(rhs: TV) = false
-  }
-}
+//     override def ===(rhs: Macska) = elet == rhs.elet
+//     override def ===(rhs: TV) = false
+//   }
+// }
